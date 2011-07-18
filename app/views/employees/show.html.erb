@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @employee.department %>
+</p>
+<p>Attendance</p>
+<%= render :partial => "registers/register",
+           :collection => @employee.registers %>
+
+<h2>Add a attendance:</h2>
+<%= render "registers/form" %>
+
+
+
+
+
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>
+<%#= link_to 'Today attendance', new_employee_path %>
